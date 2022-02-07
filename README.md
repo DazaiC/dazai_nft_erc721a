@@ -1,6 +1,6 @@
 # Welcome
 
- *This is a NFT project using ERC721A to implement.
+ * This is a NFT project using ERC721A to implement.
 
 ## Features
  * Two-Stage mint : presale, publicsale
