@@ -12,6 +12,20 @@ Make sure you have node.js installed so you can use npm, then run:
 npm install
 ```
 
+# Hardhat
+
+To install Hardhat, go to an empty folder, initialize an npm project (i.e. npm init), and run
+
+```sh
+npm install --save-dev hardhat
+```
+
+Once it's installed, just run this command and follow its instructions:
+
+```sh
+npx hardhat
+```
+
 # Usage
 
 ## How to mint (Rookies.sol)
