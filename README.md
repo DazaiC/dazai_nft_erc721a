@@ -13,13 +13,6 @@
  * 優化 3 - updating the owner data once per batch mint request, instead of per minted NFT
  * 實作參考資料 [Azuki ERC721A](https://www.azuki.com/erc721a?fbclid=IwAR0bYh7Ehls9hilQxVLl6h4AbqQNWng0N2o6UdOCpi4BRjm9609bGTKafqY)
 
-## How to stake
-* fisrtly, approve NFT to "TestStaking" contract
-* secondly, stake NFT, then "TestStaking" contract will be the owner of this NFT
-* thirdly, reward points increase automaticly
-* finally, unstake NFT, NFT will be return to staker, and get reward
-
-
 ## License
 
 This project is licensed under the [MIT license](LICENSE).
