@@ -1,42 +1,23 @@
-# Advanced Sample Hardhat Project
+ ## How to mint (Rookies.sol)
+ * add to whitelist ```function addToAllowList(address[] calldata addresses)```
+ * check mint status ```_isPreSaleActive, _isPublicSaleActive```
+ * mint ```function mint_presale(uint8 NUM_TOKENS_MINT), function mint_public(uint8 NUM_TOKENS_MINT)```
+ * Etherscan合約地址[Rookies.sol](https://rinkeby.etherscan.io/address/0x01d5b5044c5c6a97e071c5753fb7b6d40949cc06#code)
 
-This project demonstrates an advanced Hardhat use case, integrating other tools commonly used alongside Hardhat in the ecosystem.
+ ## Why ERC721A
+ * 節省mint gas fee，特別是針對批次mint
+ * 優化 1 - Removing duplicate storage from OpenZeppelin’s (OZ) ERC721Enumerable
+ * 優化 2 - updating the owner’s balance once per batch mint request, instead of per minted NFT 
+ * 優化 3 - updating the owner data once per batch mint request, instead of per minted NFT
+ * 實作參考資料[Azuki ERC721A](https://www.azuki.com/erc721a?fbclid=IwAR0bYh7Ehls9hilQxVLl6h4AbqQNWng0N2o6UdOCpi4BRjm9609bGTKafqY)
 
-The project comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts. It also comes with a variety of other tools, preconfigured to work with the project code.
+## How to stake
+* fisrtly, approve NFT to "TestStaking" contract
+* secondly, stake NFT, then "TestStaking" contract will be the owner of this NFT
+* thirdly, reward points increase automaticly
+* finally, unstake NFT, NFT will be return to staker, and get reward
 
-Try running some of the following tasks:
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-npx hardhat help
-REPORT_GAS=true npx hardhat test
-npx hardhat coverage
-npx hardhat run scripts/deploy.js
-node scripts/deploy.js
-npx eslint '**/*.js'
-npx eslint '**/*.js' --fix
-npx prettier '**/*.{json,sol,md}' --check
-npx prettier '**/*.{json,sol,md}' --write
-npx solhint 'contracts/**/*.sol'
-npx solhint 'contracts/**/*.sol' --fix
-```
+## License
 
-# Etherscan verification
-
-To try out Etherscan verification, you first need to deploy a contract to an Ethereum network that's supported by Etherscan, such as Ropsten.
-
-In this project, copy the .env.example file to a file named .env, and then edit it to fill in the details. Enter your Etherscan API key, your Ropsten node URL (eg from Alchemy), and the private key of the account which will send the deployment transaction. With a valid .env file in place, first deploy your contract:
-
-```shell
-hardhat run --network ropsten scripts/deploy.js
-```
-
-Then, copy the deployment address and paste it in to replace `DEPLOYED_CONTRACT_ADDRESS` in this command:
-
-```shell
-npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
-```
+This project is licensed under the [MIT license](LICENSE).
