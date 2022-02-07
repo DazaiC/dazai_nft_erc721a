@@ -26,6 +26,16 @@ Once it's installed, just run this command and follow its instructions:
 npx hardhat
 ```
 
+Create a .env file and put your ETHERSCAN_API_KEY, PRIVATE_KEY, TESTNET_URL
+
+```sh
+ETHERSCAN_API_KEY = 123........
+PRIVATE_KEY = 456......
+
+ROPSTEN_URL=https://ropsten.infura.io/v3/abcdefg123456...
+RINKEBY_URL=https://rinkeby.infura.io/v3/abcdefg123456...
+```
+
 # Usage
 
 ## How to mint (Rookies.sol)
