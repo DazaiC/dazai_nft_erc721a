@@ -65,6 +65,7 @@ ROPSTEN_URL = https://ropsten.infura.io/v3/abcdefg123456...
 RINKEBY_URL = https://rinkeby.infura.io/v3/abcdefg123456...
 ```
 
+* more info about [Hardhat] (https://hardhat.org/tutorial/)
 
 ## License
 
